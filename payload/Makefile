@@ -17,7 +17,7 @@ STRIP := llvm-strip
 endif
 
 CFLAGS  += -D__PROSPERO__ -Wall -Wextra -Wshadow -Wunreachable-code \
-	-Werror -Wno-unused-but-set-global -g -O2 -fPIC \
+	-Werror -Wno-unknown-warning-option -g -O2 -fPIC \
 	-fno-stack-protector -fno-jump-tables -ffunction-sections -fdata-sections \
 	-fdebug-compilation-dir=.
 LDFLAGS      += -Wl,--gc-sections,--build-id=sha1

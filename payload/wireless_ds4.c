@@ -2167,11 +2167,10 @@ game_pad_get_controller_info_stub(int32_t handle, void *out,
             info[7] = 0x04;
             info[8] = 13;
             info[9] = 13;
-            info[10] = 1; /* Standard controller class (DualSense) */
+            info[10] = 0; /* Experimental connection type */
             for (unsigned byte = 20; byte < 28; ++byte)
                 info[byte] = 0;
         }
-        info[10] = 1; /* Standard controller class (DualSense) */
         /* The same physical feed supplies input and connection generation. */
         info[11] = live_pad[offsetof(ScePadData, count)];
         info[12] = 1;
@@ -2239,11 +2238,10 @@ game_pad_get_ext_controller_info_stub(int32_t handle, void *out,
             info[7] = 0x04;
             info[8] = 13;
             info[9] = 13;
-            info[10] = 1;
+            info[10] = 0; /* Experimental connection type */
             for (unsigned byte = 20; byte < 28; ++byte)
                 info[byte] = 0;
         }
-        info[10] = 1; /* Standard controller class (DualSense) */
         info[11] = live_pad[offsetof(ScePadData, count)];
         info[12] = 1;
         info[13] = 0;
